@@ -3,7 +3,7 @@ $(function(){
         if(document.all){
         document.body.style.behavior = 'url(#default#homepage)'; 
         document.body.setHomePage(document.URL); 
-        }else{alert("ÉèÖÃÊ×Ò³Ê§°Ü£¬ÇëÊÖ¶¯ÉèÖÃ£¡");} 
+        }else{alert("è®¾ç½®é¦–é¡µå¤±è´¥ï¼Œè¯·æ‰‹åŠ¨è®¾ç½®ï¼");} 
 	});
 	$(".win-favorite").click(function(){
 		var sURL=document.URL; 
@@ -11,7 +11,7 @@ $(function(){
 		try {window.external.addFavorite(sURL, sTitle);} 
 		catch(e){ 
 			try{window.sidebar.addPanel(sTitle, sURL, "");} 
-			catch(e){alert("¼ÓÈëÊÕ²ØÊ§°Ü£¬ÇëÊ¹ÓÃCtrl+D½øĞĞÌí¼Ó");} 
+			catch(e){alert("åŠ å…¥æ”¶è—å¤±è´¥ï¼Œè¯·ä½¿ç”¨Ctrl+Dè¿›è¡Œæ·»åŠ ");} 
 		}
 	});
 	$(".win-forward").click(function(){
@@ -80,7 +80,7 @@ $(function(){
 		return ($content.length === 0) || $content == $(element).attr("placeholder");
 	};
 	$showplaceholder=function(element){
-		//²»Îª¿Õ¼°ÃÜÂë¿ò
+		//ä¸ä¸ºç©ºåŠå¯†ç æ¡†
 		if($emptyplaceholder(element) && $(element).attr("type")!="password"){
 			$(element).val($(element).attr("placeholder"));
 			$(element).data("pintuerholder",$(element).css("color"));
@@ -475,7 +475,7 @@ $(function(){
 
 		});
 	});
-	//scrolltotop ·µ»Ø¶¥²¿´úÂë
+	//scrolltotop è¿”å›é¡¶éƒ¨ä»£ç 
 
 	$(".fixed").each(function(){
 		var e=$(this);

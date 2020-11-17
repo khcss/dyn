@@ -1,23 +1,23 @@
-//ÕÛµşÒş²Ø Õ¹¿ªÈ«²¿ //gradient ĞèÒª½¨Á¢ÔÚË«²ãdivÀïÃæ
+//æŠ˜å éšè— å±•å¼€å…¨éƒ¨ //gradient éœ€è¦å»ºç«‹åœ¨åŒå±‚divé‡Œé¢
 $(function(){
 	var slideHeight = 360; // px
 	var defHeight = $('#bodyshow').height();
 	if(defHeight >= slideHeight){
 		$('#bodyshow').css({"height":slideHeight+"px","overflow":"hidden"});
-		$('#read-more').append('<div class="showdie margin-top"><a href="#">--Õ¹¿ªÈ«²¿¾çÇé--</a></div>');
+		$('#read-more').append('<div class="showdie margin-top"><a href="#">--å±•å¼€å…¨éƒ¨å‰§æƒ…--</a></div>');
 		$('#read-more a').click(function(){
 			var curHeight = $('#bodyshow').height();
 			if(curHeight == slideHeight){
 				$('#bodyshow').animate({
 				  height: defHeight
 				}, "normal");
-				$('#read-more a').html('--Òş²Ø²¿·Ö¾çÇé--');
+				$('#read-more a').html('--éšè—éƒ¨åˆ†å‰§æƒ…--');
 				$('#gradient').fadeOut();
 			}else{
 				$('#bodyshow').animate({
 				  height: slideHeight
 				}, "normal");
-				$('#read-more a').html('--Õ¹¿ªÈ«²¿¾çÇé--');
+				$('#read-more a').html('--å±•å¼€å…¨éƒ¨å‰§æƒ…--');
 				$('#gradient').fadeIn();
 			}
 			return false;
@@ -26,11 +26,11 @@ $(function(){
 });
 
 
-//scrolltotop ·µ»Ø¶¥²¿´úÂë
+//scrolltotop è¿”å›é¡¶éƒ¨ä»£ç 
 $(function(){
-        //Ê×ÏÈ½«#back-to-topÒş²Ø
+        //é¦–å…ˆå°†#back-to-topéšè—
         $("#totop").hide();
-        //µ±¹ö¶¯ÌõµÄÎ»ÖÃ´¦ÓÚ¾à¶¥²¿100ÏñËØÒÔÏÂÊ±£¬Ìø×ªÁ´½Ó³öÏÖ£¬·ñÔòÏûÊ§
+        //å½“æ»šåŠ¨æ¡çš„ä½ç½®å¤„äºè·é¡¶éƒ¨100åƒç´ ä»¥ä¸‹æ—¶ï¼Œè·³è½¬é“¾æ¥å‡ºç°ï¼Œå¦åˆ™æ¶ˆå¤±
         $(function () {
             $(window).scroll(function(){
                 if ($(window).scrollTop()>100){
@@ -41,21 +41,21 @@ $(function(){
                     $("#totop").hide();
                 }
             });
-            //µ±µã»÷Ìø×ªÁ´½Óºó£¬»Øµ½Ò³Ãæ¶¥²¿Î»ÖÃ
+            //å½“ç‚¹å‡»è·³è½¬é“¾æ¥åï¼Œå›åˆ°é¡µé¢é¡¶éƒ¨ä½ç½®
             $("#totop").click(function(){
                 $('body,html').animate({scrollTop:0},500);
                 return false;
             });
             
-          $("#totop a").click(function(){ //ÔÚid=letter ÖĞµÄli a±êÇ©µã»÷ÊÂ¼ş
-          var v_href = $(this).attr("data"); //»ñÈ¡µ±Ç°dataµÄÖµ. alert(v_href);
+          $("#totop a").click(function(){ //åœ¨id=letter ä¸­çš„li aæ ‡ç­¾ç‚¹å‡»äº‹ä»¶
+          var v_href = $(this).attr("data"); //è·å–å½“å‰dataçš„å€¼. alert(v_href);
           $("html,body").animate({scrollTop: $(v_href).offset().top - 90});return false;
       	  });
 
         });
     }); 
 
-//³£ÓÃĞĞÎª±äÁ¿ÉèÖÃ
+//å¸¸ç”¨è¡Œä¸ºå˜é‡è®¾ç½®
 var common = {
 	images: {
 		lazyload: function() {
@@ -71,7 +71,7 @@ var common = {
 		},
 	},
 
-//²¥·ÅÒ³ÏÔÊ¾¼ò½é
+//æ’­æ”¾é¡µæ˜¾ç¤ºç®€ä»‹
 	detail:{
 		collapse: function() {
 					$(".player_detail").on("click", ".detail-more", function() {
@@ -84,7 +84,7 @@ var common = {
 	}
 }
 $(document).ready(function() {
-	//Í¼Æ¬ÑÓÊ±¼ÓÔØ
+	//å›¾ç‰‡å»¶æ—¶åŠ è½½
 	common.images.lazyload();
 	common.detail.collapse();
 });
